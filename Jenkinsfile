@@ -22,7 +22,9 @@ node("cicd-build-slaves") {
       println("Configuring K8S APP Settings");
       dir ("k8s") {
         // SHOULD MATCH NAME OF MICROSERVICE
-        sh "kubectl apply -f app-ingress.yaml"
+        sh "kubectl apply -f app-namespace.yaml"
+        //sh "kubectl apply -f app-util.yaml"
+        //sh "kubectl apply -f app-ingress.yaml"
       }
     }
 
